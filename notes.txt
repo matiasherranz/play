@@ -60,5 +60,17 @@ View information about your running app using one of the logging commands, herok
 
 Press Control+C to stop streaming the logs.
 
+_ Add new changes and deploy them
+
+Now deploy. Almost every deploy to Heroku follows this same pattern. First, add the modified files to the local git repository:
+$ git add .
+Now commit the changes to the repository:
+$ git commit -m "Demo"
+Now deploy, just as you did previously:
+$ git push heroku master
+Finally, check that everything is working:
+$ heroku open cool
+You should see another face.
+Report a problem
 
 
