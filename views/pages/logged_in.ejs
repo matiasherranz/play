@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+<% include ../partials/nav.ejs %>
+
+<div class="container">
+
+    <h1>Logged to Spotify with email <%= data.email %></h1>
+    <div class="media">
+        <div class="pull-left">
+            <img class="media-object" width="150" src="{{images.0.url}}"/>
+        </div>
+        <div class="media-body">
+            <dl class="dl-horizontal">
+                <dt>Display name</dt>
+                <dd class="clearfix"><%= data.display_name || '(not set)' %></dd>
+                <dt>Id</dt>
+                <dd><%= data.id %></dd>
+                <dt>Email</dt>
+                <dd><%= data.email %></dd>
+                <dt>Spotify URI</dt>
+                <dd><a target="_blank"
+                       href="<%= data.external_urls.spotify %>"><%= data.external_urls.spotify %></a>
+                </dd>
+                <dt>Link</dt>
+                <dd><a target="_blank"
+                       href="<%= data.href %>"><%= data.href %></a></dd>
+                <dt>Country</dt>
+                <dd><%= data.country %></dd>
+            </dl>
+        </div>
+    </div>
+
+    <h2>oAuth info</h2>
+    <dl class="dl-horizontal">
+        <dt>Access token</dt>
+        <dd class="text-overflow"><%= access_token %></dd>
+        <dt>Refresh token</dt>
+        <dd class="text-overflow" id="access_token_container"}><%= refresh_token %></dd>
+    </dl>
+
+    <div id="loggedin">
+        <div id="user-profile">
+        </div>
+        <div id="oauth">
+        </div>
+        <button class="btn btn-default" id="obtain-new-token">
+            Obtain new token using the refresh token
+        </button>
+    </div>
+</div>
+
+
+<script>
+  (function () {
+    const refresh_token = "<%= refresh_token %>";
+
+    document.getElementById('obtain-new-token').addEventListener('click', function () {
+      $.ajax({
+        url: '/refresh_token',
+        data: {
+          'refresh_token': refresh_token
+        }
+      }).done(function (data) {
+        access_token = data.access_token;
+        const elem = document.getElementById('access_token_container');
+        elem.innerText = access_token;
+      });
+    }, false);
+  })();
+</script>
+</body>
+</html>
