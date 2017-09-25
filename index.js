@@ -1,6 +1,7 @@
 // Required imports
 const express = require('express'); // Express web server framework
 const request = require('request'); // "Request" library
+const path = require('path');
 const querystring = require('querystring');
 const cookieParser = require('cookie-parser');
 const cool = require('cool-ascii-faces');
@@ -49,6 +50,9 @@ app.get('/', function(request, response) {
   response.render('pages/index', { ascii_face: cool() })
 });
 
+app.get('/search', function(request, response) {
+  response.sendFile(path.resolve('public', 'fe', 'index.html'));
+});
 
 app.get('/login', function(req, res) {
 
