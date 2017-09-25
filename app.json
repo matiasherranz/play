@@ -1,8 +1,7 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "name": "Spotify Playground",
+  "description": "A full stack implementation of Spotify Login and Search",
+  "repository": "https://github.com/matiasherranz/play",
   "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
+  "keywords": ["reactjs", "redux", "node", "express", "heroku", "spotify"]
 }

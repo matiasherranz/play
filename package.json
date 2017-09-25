@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "ipsyfy",
   "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "description": "A full stack implementation of Spotify Login and Search",
   "engines": {
     "node": "6.11.1"
   },
