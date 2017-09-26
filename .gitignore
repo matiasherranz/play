@@ -6,7 +6,6 @@ npm-debug.log
 *.env
 *.dev
 .DS_Store
-public/fe/js/bundle.min.js
 
 # Docker
 Dockerfile
