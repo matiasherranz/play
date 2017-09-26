@@ -7,7 +7,7 @@ import Album from '../components/Album';
 import Artist from '../components/Artist';
 import LoadingOverlay from '../components/LoadingOverlay';
 import Player from '../components/Player';
-import Search from './search';
+import Search from './Search';
 
 import {Col, Grid, Row, Jumbotron, Button} from 'react-bootstrap';
 
