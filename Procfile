@@ -1,1 +1,2 @@
-web: npm run start
+web: node --debug=5858 index.js
+

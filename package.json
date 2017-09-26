@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build_client && node index.js",
+    "deploy": "npm run build_client && git push heroku master",
     "test": "node test.js",
     "build_client": "cd client && npm install && npm run build && cd .."
   },

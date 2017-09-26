@@ -3,5 +3,8 @@
   "description": "A full stack implementation of Spotify Login and Search",
   "repository": "https://github.com/matiasherranz/play",
   "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
-  "keywords": ["reactjs", "redux", "node", "express", "heroku", "spotify"]
+  "keywords": ["reactjs", "redux", "node", "express", "heroku", "spotify"],
+  "scripts": {
+    "postdeploy": "npm run build_client"
+  }
 }
