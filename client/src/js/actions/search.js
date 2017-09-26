@@ -9,11 +9,6 @@ import {
   REQUEST_FETCH_ACCESS_TOKEN_FAILURE,
 } from '../constants/redux';
 
-const SPOTIFY_CLIENT_ID = "48070f16b80d443d9b563c1e105ddaca";
-const SPOTIFY_CLIENT_SECRET = "4ff4f100d55a4c5b894b5c87333e51e8";
-const REFRESH_TOKEN = "AQA4eCPyM6C5YhQSMek1QbdWyBT54YPyc3GCOY_2fMo5CZr5CVQEGCKEPtOqgyT9ffBzdsqFO8UIvg_2Yv8szr80zjmliINa4pYxuE0oXlUoB3iH2BYBMw8rDVun83SZ2jI";
-
-
 /** ***************************************************************************/
 
 /**
@@ -109,8 +104,8 @@ export const getAccessToken = (tokenRefresh=false, searchAfterAuth='') => {
       // asked to refresh the token, let's just return it:
       return access_token;
     }
-    //const baseURL = 'http://ipsyfy.herokuapp.com';
-    const baseURL = 'http://localhost:5001';
+    const baseURL = 'http://ipsyfy.herokuapp.com';
+    //const baseURL = 'http://localhost:5001';
 
     // And if there's not, let's get a new one:
     dispatch(requestAccessToken());
