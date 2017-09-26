@@ -104,7 +104,7 @@ export const getAccessToken = (tokenRefresh=false, searchAfterAuth='') => {
       // asked to refresh the token, let's just return it:
       return access_token;
     }
-    const baseURL = 'http://ipsyfy.herokuapp.com';
+    const baseURL = 'https://ipsyfy.herokuapp.com';
     //const baseURL = 'http://localhost:5001';
 
     // And if there's not, let's get a new one:
