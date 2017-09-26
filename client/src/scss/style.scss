@@ -1,0 +1,143 @@
+$primaryFont: 'Raleway', sans-serif;
+$primary: #0b5221;
+
+body {
+  height: 100%;
+  font-family: $primaryFont;
+  background: linear-gradient(90deg, #85e0bd, #daec91);
+  margin-top: 10px;
+}
+
+h2 {
+  color: $primary;
+}
+
+#custom-search-input {
+  padding: 3px;
+  border: solid 1px #E4E4E4;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+#custom-search-input input {
+  border: 0;
+  box-shadow: none;
+}
+
+/* LOADING OVERLAY STYLING */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: .5;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.loading_container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container__icon {
+  margin-left: 10px;
+  float: right;
+}
+
+.container__body {
+  padding: 10px 30px;
+  background: white;
+  opacity: 8.9;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.container__message {
+  color: #222;
+  font-size: 2rem;
+  float: left;
+}
+
+/* SPINNER STYLING */
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@-ms-keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@-webkit-keyframes spinner_intro {
+  0% {
+    stroke-dasharray: 100px, 100px;
+    stroke-dashoffset: 100px
+  }
+}
+
+@-ms-keyframes spinner_intro {
+  0% {
+    stroke-dasharray: 100px, 100px;
+    stroke-dashoffset: 100px
+  }
+}
+
+@keyframes spinner_intro {
+  0% {
+    stroke-dasharray: 100px, 100px;
+    stroke-dashoffset: 100px
+  }
+}
+
+svg.icon--spinner {
+  -webkit-animation: rotate .6s .5s linear infinite;
+  animation: rotate .6s .5s linear infinite
+}
+
+svg.icon--spinner g circle {
+  stroke-dasharray: 76px, 76px;
+  stroke-dashoffset: 0;
+  -webkit-animation: spinner_intro .3s .2s linear both;
+  animation: spinner_intro .3s .2s linear both
+}
+
+svg {
+  vertical-align: middle;
+}
