@@ -2,6 +2,6 @@
   "name": "Spotify Playground",
   "description": "A full stack implementation of Spotify Login and Search",
   "repository": "https://github.com/matiasherranz/play",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-getting-started/public/node.svg",
   "keywords": ["reactjs", "redux", "node", "express", "heroku", "spotify"],
 }
